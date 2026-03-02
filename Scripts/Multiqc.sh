@@ -11,4 +11,5 @@ cd /scratch/zq45/yn0830/AML_RNA_BAM/fastq_output
 
 mkdir -p MULTIQC
 
+#Basically merges all the FASTQC files into a single html
 multiqc FASTQC -o MULTIQC
