@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#PBS -l ncpus=16
+#PBS -l mem=900GB
+#PBS -l jobfs=10GB
+#PBS -q hugemem
+#PBS -P zq45
+#PBS -l walltime=05:00:00
+#PBS -l storage=gdata/zq45+scratch/zq45
+#PBS -l wd
+
+bash Graph_Building.sh
