@@ -7,10 +7,11 @@ conda activate unsw
 
 Dirname="/home/z5752982/STAR-aligner/"
 
+#Index construction before alignement 
 STAR \
   --runThreadN 16 \
   --runMode genomeGenerate \
   --genomeDir ${Dirname}/Index-Creation \
   --genomeFastaFiles ${Dirname}/GTF-FASTA/Homo_sapiens.GRCh38.dna_sm.primary_assembly.fa \
   --sjdbGTFfile ${Dirname}/GTF-FASTA/Homo_sapiens.GRCh38.115.gtf \
-  --sjdbOverhang 124
+  --sjdbOverhang 124 #Length of the reads - 1 important !
