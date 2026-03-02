@@ -1,0 +1,58 @@
+---
+title: "GTF edition"
+output: html_document
+date: "2026-02-04"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+```{r}
+#Install important packages
+install.packages("readxl")
+install.packages("dplyr")
+install.packages("fs")
+install.packages("rlist")
+install.packages("tidyverse")
+install.packages("tibble")
+install.packages("data.table", dependencies=TRUE)
+install.packages("rapportools")
+```
+
+```{r}
+#Launch important packages
+library(rtracklayer)
+library(readxl)
+library(tidyverse)
+library(rlist)
+library(data.table)
+library(rapportools)
+```
+
+```{r}
+#Import the gtf file as a data frame with all columns better than the Kwok method
+directory_in = "/Users/yahya/Desktop/STAR-aligner/GTF-FASTA/"
+setwd(directory_in)
+
+g <- readGFF("Homo_sapiens.GRCh38.115.gtf")
+```
+
+```{r}
+data.table_gtf_protein_coding = g %>%
+  dplyr::filter(gene_biotype == "protein_coding" ) %>% #keep protein-coding genes only
+  dplyr::filter(type == "transcript") %>% # keep transcript genes only
+  dplyr::filter(seqid != "MT") #Remove mitochondrial genes (to discuss?)
+```
+
+```{r}
+directory_output = "/Users/yahya/Desktop/STAR-aligner/GTF-FASTA/"
+setwd(directory_output)
+
+filename_output = "GTF_Protein_Coding_Genes"
+write.table(data.table_gtf_protein_coding, filename_output, col.names = T, row.names = F, sep = "\t", quote = F)
+```

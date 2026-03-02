@@ -1,0 +1,97 @@
+---
+title: "Exon-Attempt"
+output: html_document
+date: "2026-02-11"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+```{r}
+#Launch important packages
+library(rtracklayer)
+library(readxl)
+library(tidyverse)
+library(rlist)
+library(data.table)
+library(rapportools)
+```
+
+```{r}
+#Import the gtf file as a data frame with all columns better than the Kwok method
+directory_in = "/Users/yahya/Desktop/STAR-aligner/GTF-FASTA/"
+setwd(directory_in)
+g <- readGFF("Homo_sapiens.GRCh38.115.gtf")
+```
+
+```{r}
+data.table_gtf_protein_coding = g %>%
+  dplyr::filter(gene_biotype == "protein_coding" ) %>% #keep protein-coding genes only
+  dplyr::filter(type == "exon")%>% # keep exons only
+  dplyr::filter(seqid != "MT") #Remove mitochondrial genes (to discuss?)
+```
+
+```{r}
+n_skipped = 0
+clock = 0
+
+transcript_list = unique(data.table_gtf_protein_coding$transcript_id) #Collect all transcript names, to map each exon to its correct transcript 
+
+#A loop to go through each transcript of the GTF
+for (i in transcript_list) {
+  clock = clock + 1 
+  # Draft_table collects all the exons of a specific transcript (i-dependant) and ranks them from their starting codon
+  draft_table <- data.table_gtf_protein_coding %>%
+    dplyr::filter(transcript_id == i) %>%
+    arrange(start)
+  #For mono-exon genes
+  if (nrow(draft_table) < 2) {
+      Exon1 <- draft_table %>%
+      dplyr::slice(1)
+      if (!exists("dataframe_sj.edited")) {
+      dataframe_sj.edited = Exon1}
+    else { 
+      dataframe_sj.edited = dataframe_sj.edited %>% 
+      bind_rows(Exon1)} 
+      next
+  } 
+  #Going through each exon in each transcript
+  for (j in 1:(nrow(draft_table)-1)) {
+    #Collect upstream exon information
+    Exon1 <- draft_table %>%
+      dplyr::slice(j)
+    #Collect downstream exon information
+    Exon2 <- draft_table %>%
+      dplyr::slice((j+1))
+    #Create a variable with the end of the upstream exon, and add one to have the coordinates of the first intronic base 
+    END = Exon1 %>% pull(end)
+    END = END + 1
+    #Create a variable with the start of the downstream exon, and withdraw one to have the coordinates of the last intronic base
+    START = Exon2 %>% pull(start)
+    START = START - 1
+    
+    if (END > START) { #To avoid using overlapping exons
+      n_skipped = n_skipped + 1 
+      next}
+    #Use Exon1 format to keep all information, simply by redifining it as an intron, and modifying the coordinates
+    Exon1 <- Exon1 %>%
+      dplyr::mutate(type = "intron") %>%
+      dplyr::mutate(start = END) %>%
+      dplyr::mutate(end = START)
+    #Create a new dataframe containing all the introns
+    if (!exists("dataframe_sj.edited")) {
+      dataframe_sj.edited = Exon1}
+    else { #Add the new intron to the dataframe
+      dataframe_sj.edited = dataframe_sj.edited %>% 
+      bind_rows(Exon1)}
+  }
+  #Print the clock
+  print((clock/length(transcript_list))*100)
+    }
+```
+
