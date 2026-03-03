@@ -1,0 +1,26 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj
+
+# Conda environments
+env/
+*.conda
+*.yaml
+
+# Python
+__pycache__/
+*.pyc
+
+# FASTQ / BAM / big data
+*.fastq
+*.fastq.gz
+*.bam
+*.sam
+*.vcf
+*.gz
+*.bgz
+*.fq
+
+
