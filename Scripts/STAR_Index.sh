@@ -5,13 +5,13 @@ source $CONDA_BASE/etc/profile.d/conda.sh
 
 conda activate unsw
 
-Dirname="/home/z5752982/STAR-aligner/"
+Dirname="/scratch/zq45/yn0830/Utilitaries"
 
-#Index construction before alignement 
+#Index construction before alignement
 STAR \
-  --runThreadN 16 \
+  --runThreadN 32 \
   --runMode genomeGenerate \
-  --genomeDir ${Dirname}/Index-Creation \
+  --genomeDir ${Dirname}/STAR_Index \
   --genomeFastaFiles ${Dirname}/GTF-FASTA/Homo_sapiens.GRCh38.dna_sm.primary_assembly.fa \
   --sjdbGTFfile ${Dirname}/GTF-FASTA/Homo_sapiens.GRCh38.115.gtf \
-  --sjdbOverhang 124 #Length of the reads - 1 important !
+  --sjdbOverhang 100 #Length of the reads - 1 important !

@@ -5,14 +5,31 @@ source $CONDA_BASE/etc/profile.d/conda.sh
 
 conda activate unsw
 
-scratchDir="/srv/scratch/z5752982/"
-outputDir="/srv/scratch/z5752982/Test_alignement"
+scratchDir="/scratch/zq45/yn0830"
+outputDir="/scratch/zq45/yn0830/CCLE_Alignement"
+
+mkdir -p "$outputDir"
+
+cd ${scratchDir}/AML_RNA_BAM/fastq_output
 
 #Performs alignment on the Reference Genome
+
+for R1 in *_R1.fastq.gz; do
+
+R2="${R1/_R1.fastq.gz/_R2.fastq.gz}"
+
+sample="${R1%_R1.fastq.gz}"
+
+sampleDir="${outputDir}/${sample}"
+mkdir -p "$sampleDir"
+
+
+#Two pass is important for AS detection
 STAR \
 	--runThreadN 16 \
-	--genomeDir "${scratchDir}STAR-aligner/Index-Creation" \
-	--readFilesIn "${scratchDir}Test_FASTQ/ENCFFR1.fastq.gz" "${scratchDir}Test_FASTQ/ENCFFR2.fastq.gz" \
+	--genomeDir "${scratchDir}/Utilitaries/STAR_Index" \
+	--readFilesIn "${R1}" "${R2}" \
 	--readFilesCommand zcat \
-	--twopassMode Basic \ #Important for AS detection, as it runs two steps of SJ identification
- 	--outFileNamePrefix "${outputDir}/"
+	--twopassMode Basic \
+ 	--outFileNamePrefix "${sampleDir}/"
+done

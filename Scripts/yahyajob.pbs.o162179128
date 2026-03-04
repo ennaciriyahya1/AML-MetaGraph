@@ -1,0 +1,312 @@
+	STAR --runThreadN 16 --genomeDir /scratch/zq45/yn0830/Utilitaries/STAR_Index --readFilesIn AML-193_R1.fastq.gz AML-193_R2.fastq.gz --readFilesCommand zcat --twopassMode Basic --outFileNamePrefix /scratch/zq45/yn0830/CCLE_Alignement/AML-193/
+	STAR version: 2.7.10b   compiled: 2022-11-01T09:53:26-04:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 03 16:36:04 ..... started STAR run
+Mar 03 16:36:04 ..... loading genome
+Mar 03 16:37:05 ..... started 1st pass mapping
+Mar 03 16:44:02 ..... finished 1st pass mapping
+Mar 03 16:44:04 ..... inserting junctions into the genome indices
+Mar 03 16:45:55 ..... started mapping
+Mar 03 16:53:25 ..... finished mapping
+Mar 03 16:53:30 ..... finished successfully
+	STAR --runThreadN 16 --genomeDir /scratch/zq45/yn0830/Utilitaries/STAR_Index --readFilesIn CDS-Sl0JI6.Aligned.sortedByCoord.out_R1.fastq.gz CDS-Sl0JI6.Aligned.sortedByCoord.out_R2.fastq.gz --readFilesCommand zcat --twopassMode Basic --outFileNamePrefix /scratch/zq45/yn0830/CCLE_Alignement/CDS-Sl0JI6.Aligned.sortedByCoord.out/
+	STAR version: 2.7.10b   compiled: 2022-11-01T09:53:26-04:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 03 16:53:30 ..... started STAR run
+Mar 03 16:53:30 ..... loading genome
+Mar 03 16:53:57 ..... started 1st pass mapping
+Mar 03 16:54:59 ..... finished 1st pass mapping
+Mar 03 16:55:00 ..... inserting junctions into the genome indices
+Mar 03 16:56:29 ..... started mapping
+Mar 03 16:57:33 ..... finished mapping
+Mar 03 16:57:37 ..... finished successfully
+	STAR --runThreadN 16 --genomeDir /scratch/zq45/yn0830/Utilitaries/STAR_Index --readFilesIn F-36P_R1.fastq.gz F-36P_R2.fastq.gz --readFilesCommand zcat --twopassMode Basic --outFileNamePrefix /scratch/zq45/yn0830/CCLE_Alignement/F-36P/
+	STAR version: 2.7.10b   compiled: 2022-11-01T09:53:26-04:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 03 16:57:37 ..... started STAR run
+Mar 03 16:57:37 ..... loading genome
+Mar 03 16:58:02 ..... started 1st pass mapping
+Mar 03 17:02:27 ..... finished 1st pass mapping
+Mar 03 17:02:29 ..... inserting junctions into the genome indices
+Mar 03 17:04:30 ..... started mapping
+Mar 03 17:09:04 ..... finished mapping
+Mar 03 17:09:08 ..... finished successfully
+	STAR --runThreadN 16 --genomeDir /scratch/zq45/yn0830/Utilitaries/STAR_Index --readFilesIn G20492.HEL_92.1.7.2_R1.fastq.gz G20492.HEL_92.1.7.2_R2.fastq.gz --readFilesCommand zcat --twopassMode Basic --outFileNamePrefix /scratch/zq45/yn0830/CCLE_Alignement/G20492.HEL_92.1.7.2/
+	STAR version: 2.7.10b   compiled: 2022-11-01T09:53:26-04:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 03 17:09:09 ..... started STAR run
+Mar 03 17:09:09 ..... loading genome
+Mar 03 17:09:35 ..... started 1st pass mapping
+Mar 03 17:12:26 ..... finished 1st pass mapping
+Mar 03 17:12:28 ..... inserting junctions into the genome indices
+Mar 03 17:14:16 ..... started mapping
+Mar 03 17:17:13 ..... finished mapping
+Mar 03 17:17:17 ..... finished successfully
+	STAR --runThreadN 16 --genomeDir /scratch/zq45/yn0830/Utilitaries/STAR_Index --readFilesIn G26187.MONO-MAC-1_R1.fastq.gz G26187.MONO-MAC-1_R2.fastq.gz --readFilesCommand zcat --twopassMode Basic --outFileNamePrefix /scratch/zq45/yn0830/CCLE_Alignement/G26187.MONO-MAC-1/
+	STAR version: 2.7.10b   compiled: 2022-11-01T09:53:26-04:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 03 17:17:18 ..... started STAR run
+Mar 03 17:17:18 ..... loading genome
+Mar 03 17:17:44 ..... started 1st pass mapping
+Mar 03 17:21:42 ..... finished 1st pass mapping
+Mar 03 17:21:43 ..... inserting junctions into the genome indices
+Mar 03 17:23:31 ..... started mapping
+Mar 03 17:27:40 ..... finished mapping
+Mar 03 17:27:44 ..... finished successfully
+	STAR --runThreadN 16 --genomeDir /scratch/zq45/yn0830/Utilitaries/STAR_Index --readFilesIn G26200.HL-60.2_R1.fastq.gz G26200.HL-60.2_R2.fastq.gz --readFilesCommand zcat --twopassMode Basic --outFileNamePrefix /scratch/zq45/yn0830/CCLE_Alignement/G26200.HL-60.2/
+	STAR version: 2.7.10b   compiled: 2022-11-01T09:53:26-04:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 03 17:27:45 ..... started STAR run
+Mar 03 17:27:45 ..... loading genome
+Mar 03 17:28:11 ..... started 1st pass mapping
+Mar 03 17:32:24 ..... finished 1st pass mapping
+Mar 03 17:32:25 ..... inserting junctions into the genome indices
+Mar 03 17:34:09 ..... started mapping
+Mar 03 17:38:39 ..... finished mapping
+Mar 03 17:38:44 ..... finished successfully
+	STAR --runThreadN 16 --genomeDir /scratch/zq45/yn0830/Utilitaries/STAR_Index --readFilesIn G26205.NOMO-1.2_R1.fastq.gz G26205.NOMO-1.2_R2.fastq.gz --readFilesCommand zcat --twopassMode Basic --outFileNamePrefix /scratch/zq45/yn0830/CCLE_Alignement/G26205.NOMO-1.2/
+	STAR version: 2.7.10b   compiled: 2022-11-01T09:53:26-04:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 03 17:38:44 ..... started STAR run
+Mar 03 17:38:44 ..... loading genome
+Mar 03 17:39:12 ..... started 1st pass mapping
+Mar 03 17:44:40 ..... finished 1st pass mapping
+Mar 03 17:44:41 ..... inserting junctions into the genome indices
+Mar 03 17:46:39 ..... started mapping
+Mar 03 17:53:36 ..... finished mapping
+Mar 03 17:53:41 ..... finished successfully
+	STAR --runThreadN 16 --genomeDir /scratch/zq45/yn0830/Utilitaries/STAR_Index --readFilesIn G26207.MONO-MAC-6.2_R1.fastq.gz G26207.MONO-MAC-6.2_R2.fastq.gz --readFilesCommand zcat --twopassMode Basic --outFileNamePrefix /scratch/zq45/yn0830/CCLE_Alignement/G26207.MONO-MAC-6.2/
+	STAR version: 2.7.10b   compiled: 2022-11-01T09:53:26-04:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 03 17:53:41 ..... started STAR run
+Mar 03 17:53:41 ..... loading genome
+Mar 03 17:54:09 ..... started 1st pass mapping
+Mar 03 17:59:05 ..... finished 1st pass mapping
+Mar 03 17:59:06 ..... inserting junctions into the genome indices
+Mar 03 18:00:56 ..... started mapping
+Mar 03 18:06:15 ..... finished mapping
+Mar 03 18:06:19 ..... finished successfully
+	STAR --runThreadN 16 --genomeDir /scratch/zq45/yn0830/Utilitaries/STAR_Index --readFilesIn G26238.OCI-AML2.2_R1.fastq.gz G26238.OCI-AML2.2_R2.fastq.gz --readFilesCommand zcat --twopassMode Basic --outFileNamePrefix /scratch/zq45/yn0830/CCLE_Alignement/G26238.OCI-AML2.2/
+	STAR version: 2.7.10b   compiled: 2022-11-01T09:53:26-04:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 03 18:06:19 ..... started STAR run
+Mar 03 18:06:19 ..... loading genome
+Mar 03 18:06:46 ..... started 1st pass mapping
+Mar 03 18:11:12 ..... finished 1st pass mapping
+Mar 03 18:11:14 ..... inserting junctions into the genome indices
+Mar 03 18:13:08 ..... started mapping
+Mar 03 18:18:07 ..... finished mapping
+Mar 03 18:18:12 ..... finished successfully
+	STAR --runThreadN 16 --genomeDir /scratch/zq45/yn0830/Utilitaries/STAR_Index --readFilesIn G26239.NB-4.2_R1.fastq.gz G26239.NB-4.2_R2.fastq.gz --readFilesCommand zcat --twopassMode Basic --outFileNamePrefix /scratch/zq45/yn0830/CCLE_Alignement/G26239.NB-4.2/
+	STAR version: 2.7.10b   compiled: 2022-11-01T09:53:26-04:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 03 18:18:12 ..... started STAR run
+Mar 03 18:18:12 ..... loading genome
+Mar 03 18:18:39 ..... started 1st pass mapping
+Mar 03 18:25:01 ..... finished 1st pass mapping
+Mar 03 18:25:02 ..... inserting junctions into the genome indices
+Mar 03 18:26:57 ..... started mapping
+Mar 03 18:33:32 ..... finished mapping
+Mar 03 18:33:37 ..... finished successfully
+	STAR --runThreadN 16 --genomeDir /scratch/zq45/yn0830/Utilitaries/STAR_Index --readFilesIn G27236.OCI-AML3.1_R1.fastq.gz G27236.OCI-AML3.1_R2.fastq.gz --readFilesCommand zcat --twopassMode Basic --outFileNamePrefix /scratch/zq45/yn0830/CCLE_Alignement/G27236.OCI-AML3.1/
+	STAR version: 2.7.10b   compiled: 2022-11-01T09:53:26-04:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 03 18:33:37 ..... started STAR run
+Mar 03 18:33:37 ..... loading genome
+Mar 03 18:34:04 ..... started 1st pass mapping
+Mar 03 18:37:15 ..... finished 1st pass mapping
+Mar 03 18:37:16 ..... inserting junctions into the genome indices
+Mar 03 18:39:04 ..... started mapping
+Mar 03 18:43:09 ..... finished mapping
+Mar 03 18:43:13 ..... finished successfully
+	STAR --runThreadN 16 --genomeDir /scratch/zq45/yn0830/Utilitaries/STAR_Index --readFilesIn G27241.THP-1.1_R1.fastq.gz G27241.THP-1.1_R2.fastq.gz --readFilesCommand zcat --twopassMode Basic --outFileNamePrefix /scratch/zq45/yn0830/CCLE_Alignement/G27241.THP-1.1/
+	STAR version: 2.7.10b   compiled: 2022-11-01T09:53:26-04:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 03 18:43:13 ..... started STAR run
+Mar 03 18:43:13 ..... loading genome
+Mar 03 18:43:39 ..... started 1st pass mapping
+Mar 03 18:46:53 ..... finished 1st pass mapping
+Mar 03 18:46:54 ..... inserting junctions into the genome indices
+Mar 03 18:48:47 ..... started mapping
+Mar 03 18:52:11 ..... finished mapping
+Mar 03 18:52:15 ..... finished successfully
+	STAR --runThreadN 16 --genomeDir /scratch/zq45/yn0830/Utilitaries/STAR_Index --readFilesIn G27258.OCI-AML5.1_R1.fastq.gz G27258.OCI-AML5.1_R2.fastq.gz --readFilesCommand zcat --twopassMode Basic --outFileNamePrefix /scratch/zq45/yn0830/CCLE_Alignement/G27258.OCI-AML5.1/
+	STAR version: 2.7.10b   compiled: 2022-11-01T09:53:26-04:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 03 18:52:16 ..... started STAR run
+Mar 03 18:52:17 ..... loading genome
+Mar 03 18:52:43 ..... started 1st pass mapping
+Mar 03 18:56:01 ..... finished 1st pass mapping
+Mar 03 18:56:02 ..... inserting junctions into the genome indices
+Mar 03 18:58:00 ..... started mapping
+Mar 03 19:01:55 ..... finished mapping
+Mar 03 19:01:59 ..... finished successfully
+	STAR --runThreadN 16 --genomeDir /scratch/zq45/yn0830/Utilitaries/STAR_Index --readFilesIn G27380.EOL-1.1_R1.fastq.gz G27380.EOL-1.1_R2.fastq.gz --readFilesCommand zcat --twopassMode Basic --outFileNamePrefix /scratch/zq45/yn0830/CCLE_Alignement/G27380.EOL-1.1/
+	STAR version: 2.7.10b   compiled: 2022-11-01T09:53:26-04:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 03 19:02:00 ..... started STAR run
+Mar 03 19:02:09 ..... loading genome
+Mar 03 19:03:02 ..... started 1st pass mapping
+Mar 03 19:12:54 ..... finished 1st pass mapping
+Mar 03 19:12:55 ..... inserting junctions into the genome indices
+Mar 03 19:14:54 ..... started mapping
+Mar 03 19:27:13 ..... finished mapping
+Mar 03 19:27:17 ..... finished successfully
+	STAR --runThreadN 16 --genomeDir /scratch/zq45/yn0830/Utilitaries/STAR_Index --readFilesIn G27388.GDM-1.1_R1.fastq.gz G27388.GDM-1.1_R2.fastq.gz --readFilesCommand zcat --twopassMode Basic --outFileNamePrefix /scratch/zq45/yn0830/CCLE_Alignement/G27388.GDM-1.1/
+	STAR version: 2.7.10b   compiled: 2022-11-01T09:53:26-04:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 03 19:27:18 ..... started STAR run
+Mar 03 19:27:19 ..... loading genome
+Mar 03 19:28:00 ..... started 1st pass mapping
+Mar 03 19:36:09 ..... finished 1st pass mapping
+Mar 03 19:36:10 ..... inserting junctions into the genome indices
+Mar 03 19:38:10 ..... started mapping
+Mar 03 19:46:59 ..... finished mapping
+Mar 03 19:47:03 ..... finished successfully
+	STAR --runThreadN 16 --genomeDir /scratch/zq45/yn0830/Utilitaries/STAR_Index --readFilesIn G27390.CMK.1_R1.fastq.gz G27390.CMK.1_R2.fastq.gz --readFilesCommand zcat --twopassMode Basic --outFileNamePrefix /scratch/zq45/yn0830/CCLE_Alignement/G27390.CMK.1/
+	STAR version: 2.7.10b   compiled: 2022-11-01T09:53:26-04:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 03 19:47:03 ..... started STAR run
+Mar 03 19:47:03 ..... loading genome
+Mar 03 19:47:33 ..... started 1st pass mapping
+Mar 03 19:55:39 ..... finished 1st pass mapping
+Mar 03 19:55:41 ..... inserting junctions into the genome indices
+Mar 03 19:57:52 ..... started mapping
+Mar 03 20:06:36 ..... finished mapping
+Mar 03 20:06:40 ..... finished successfully
+	STAR --runThreadN 16 --genomeDir /scratch/zq45/yn0830/Utilitaries/STAR_Index --readFilesIn G27458.SIG-M5.2_R1.fastq.gz G27458.SIG-M5.2_R2.fastq.gz --readFilesCommand zcat --twopassMode Basic --outFileNamePrefix /scratch/zq45/yn0830/CCLE_Alignement/G27458.SIG-M5.2/
+	STAR version: 2.7.10b   compiled: 2022-11-01T09:53:26-04:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 03 20:06:41 ..... started STAR run
+Mar 03 20:06:41 ..... loading genome
+Mar 03 20:07:10 ..... started 1st pass mapping
+Mar 03 20:11:45 ..... finished 1st pass mapping
+Mar 03 20:11:46 ..... inserting junctions into the genome indices
+Mar 03 20:13:43 ..... started mapping
+Mar 03 20:18:49 ..... finished mapping
+Mar 03 20:18:54 ..... finished successfully
+	STAR --runThreadN 16 --genomeDir /scratch/zq45/yn0830/Utilitaries/STAR_Index --readFilesIn G27510.SKM-1.2_R1.fastq.gz G27510.SKM-1.2_R2.fastq.gz --readFilesCommand zcat --twopassMode Basic --outFileNamePrefix /scratch/zq45/yn0830/CCLE_Alignement/G27510.SKM-1.2/
+	STAR version: 2.7.10b   compiled: 2022-11-01T09:53:26-04:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 03 20:18:54 ..... started STAR run
+Mar 03 20:18:54 ..... loading genome
+Mar 03 20:19:21 ..... started 1st pass mapping
+Mar 03 20:24:29 ..... finished 1st pass mapping
+Mar 03 20:24:30 ..... inserting junctions into the genome indices
+Mar 03 20:26:28 ..... started mapping
+Mar 03 20:33:14 ..... finished mapping
+Mar 03 20:33:18 ..... finished successfully
+	STAR --runThreadN 16 --genomeDir /scratch/zq45/yn0830/Utilitaries/STAR_Index --readFilesIn G27530.PL-21.2_R1.fastq.gz G27530.PL-21.2_R2.fastq.gz --readFilesCommand zcat --twopassMode Basic --outFileNamePrefix /scratch/zq45/yn0830/CCLE_Alignement/G27530.PL-21.2/
+	STAR version: 2.7.10b   compiled: 2022-11-01T09:53:26-04:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 03 20:33:18 ..... started STAR run
+Mar 03 20:33:19 ..... loading genome
+Mar 03 20:33:46 ..... started 1st pass mapping
+Mar 03 20:39:17 ..... finished 1st pass mapping
+Mar 03 20:39:18 ..... inserting junctions into the genome indices
+Mar 03 20:41:12 ..... started mapping
+Mar 03 20:50:15 ..... finished mapping
+Mar 03 20:50:19 ..... finished successfully
+	STAR --runThreadN 16 --genomeDir /scratch/zq45/yn0830/Utilitaries/STAR_Index --readFilesIn G28007.M-07e.1_R1.fastq.gz G28007.M-07e.1_R2.fastq.gz --readFilesCommand zcat --twopassMode Basic --outFileNamePrefix /scratch/zq45/yn0830/CCLE_Alignement/G28007.M-07e.1/
+	STAR version: 2.7.10b   compiled: 2022-11-01T09:53:26-04:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 03 20:50:20 ..... started STAR run
+Mar 03 20:50:20 ..... loading genome
+Mar 03 20:50:49 ..... started 1st pass mapping
+Mar 03 20:52:58 ..... finished 1st pass mapping
+Mar 03 20:52:59 ..... inserting junctions into the genome indices
+Mar 03 20:54:47 ..... started mapping
+Mar 03 20:57:03 ..... finished mapping
+Mar 03 20:57:07 ..... finished successfully
+	STAR --runThreadN 16 --genomeDir /scratch/zq45/yn0830/Utilitaries/STAR_Index --readFilesIn G28028.KG-1.1_R1.fastq.gz G28028.KG-1.1_R2.fastq.gz --readFilesCommand zcat --twopassMode Basic --outFileNamePrefix /scratch/zq45/yn0830/CCLE_Alignement/G28028.KG-1.1/
+	STAR version: 2.7.10b   compiled: 2022-11-01T09:53:26-04:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 03 20:57:07 ..... started STAR run
+Mar 03 20:57:11 ..... loading genome
+Mar 03 20:57:40 ..... started 1st pass mapping
+Mar 03 20:59:52 ..... finished 1st pass mapping
+Mar 03 20:59:54 ..... inserting junctions into the genome indices
+Mar 03 21:01:48 ..... started mapping
+Mar 03 21:04:06 ..... finished mapping
+Mar 03 21:04:10 ..... finished successfully
+	STAR --runThreadN 16 --genomeDir /scratch/zq45/yn0830/Utilitaries/STAR_Index --readFilesIn G28043.Kasumi-6.1_R1.fastq.gz G28043.Kasumi-6.1_R2.fastq.gz --readFilesCommand zcat --twopassMode Basic --outFileNamePrefix /scratch/zq45/yn0830/CCLE_Alignement/G28043.Kasumi-6.1/
+	STAR version: 2.7.10b   compiled: 2022-11-01T09:53:26-04:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 03 21:04:10 ..... started STAR run
+Mar 03 21:04:10 ..... loading genome
+Mar 03 21:04:37 ..... started 1st pass mapping
+Mar 03 21:06:56 ..... finished 1st pass mapping
+Mar 03 21:06:57 ..... inserting junctions into the genome indices
+Mar 03 21:08:46 ..... started mapping
+Mar 03 21:11:18 ..... finished mapping
+Mar 03 21:11:22 ..... finished successfully
+	STAR --runThreadN 16 --genomeDir /scratch/zq45/yn0830/Utilitaries/STAR_Index --readFilesIn G28048.ME-1.1_R1.fastq.gz G28048.ME-1.1_R2.fastq.gz --readFilesCommand zcat --twopassMode Basic --outFileNamePrefix /scratch/zq45/yn0830/CCLE_Alignement/G28048.ME-1.1/
+	STAR version: 2.7.10b   compiled: 2022-11-01T09:53:26-04:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 03 21:11:23 ..... started STAR run
+Mar 03 21:11:26 ..... loading genome
+Mar 03 21:11:54 ..... started 1st pass mapping
+Mar 03 21:13:57 ..... finished 1st pass mapping
+Mar 03 21:14:00 ..... inserting junctions into the genome indices
+Mar 03 21:15:49 ..... started mapping
+Mar 03 21:18:28 ..... finished mapping
+Mar 03 21:18:33 ..... finished successfully
+	STAR --runThreadN 16 --genomeDir /scratch/zq45/yn0830/Utilitaries/STAR_Index --readFilesIn G28555.MOLM-16.1_R1.fastq.gz G28555.MOLM-16.1_R2.fastq.gz --readFilesCommand zcat --twopassMode Basic --outFileNamePrefix /scratch/zq45/yn0830/CCLE_Alignement/G28555.MOLM-16.1/
+	STAR version: 2.7.10b   compiled: 2022-11-01T09:53:26-04:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 03 21:18:33 ..... started STAR run
+Mar 03 21:18:33 ..... loading genome
+Mar 03 21:19:01 ..... started 1st pass mapping
+Mar 03 21:23:52 ..... finished 1st pass mapping
+Mar 03 21:23:53 ..... inserting junctions into the genome indices
+Mar 03 21:25:52 ..... started mapping
+Mar 03 21:31:06 ..... finished mapping
+Mar 03 21:31:11 ..... finished successfully
+	STAR --runThreadN 16 --genomeDir /scratch/zq45/yn0830/Utilitaries/STAR_Index --readFilesIn G28580.P31_FUJ.1_R1.fastq.gz G28580.P31_FUJ.1_R2.fastq.gz --readFilesCommand zcat --twopassMode Basic --outFileNamePrefix /scratch/zq45/yn0830/CCLE_Alignement/G28580.P31_FUJ.1/
+	STAR version: 2.7.10b   compiled: 2022-11-01T09:53:26-04:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 03 21:31:11 ..... started STAR run
+Mar 03 21:31:11 ..... loading genome
+Mar 03 21:31:39 ..... started 1st pass mapping
+Mar 03 21:36:20 ..... finished 1st pass mapping
+Mar 03 21:36:21 ..... inserting junctions into the genome indices
+Mar 03 21:38:24 ..... started mapping
+Mar 03 21:45:03 ..... finished mapping
+Mar 03 21:45:08 ..... finished successfully
+	STAR --runThreadN 16 --genomeDir /scratch/zq45/yn0830/Utilitaries/STAR_Index --readFilesIn G41677.MV-4-11.5_R1.fastq.gz G41677.MV-4-11.5_R2.fastq.gz --readFilesCommand zcat --twopassMode Basic --outFileNamePrefix /scratch/zq45/yn0830/CCLE_Alignement/G41677.MV-4-11.5/
+	STAR version: 2.7.10b   compiled: 2022-11-01T09:53:26-04:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 03 21:45:08 ..... started STAR run
+Mar 03 21:45:09 ..... loading genome
+Mar 03 21:45:39 ..... started 1st pass mapping
+Mar 03 21:48:58 ..... finished 1st pass mapping
+Mar 03 21:48:59 ..... inserting junctions into the genome indices
+Mar 03 21:50:54 ..... started mapping
+Mar 03 21:54:24 ..... finished mapping
+Mar 03 21:54:29 ..... finished successfully
+	STAR --runThreadN 16 --genomeDir /scratch/zq45/yn0830/Utilitaries/STAR_Index --readFilesIn G41692.MOLM-13.5_R1.fastq.gz G41692.MOLM-13.5_R2.fastq.gz --readFilesCommand zcat --twopassMode Basic --outFileNamePrefix /scratch/zq45/yn0830/CCLE_Alignement/G41692.MOLM-13.5/
+	STAR version: 2.7.10b   compiled: 2022-11-01T09:53:26-04:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 03 21:54:29 ..... started STAR run
+Mar 03 21:54:29 ..... loading genome
+Mar 03 21:54:57 ..... started 1st pass mapping
+Mar 03 21:57:26 ..... finished 1st pass mapping
+Mar 03 21:57:31 ..... inserting junctions into the genome indices
+Mar 03 21:59:17 ..... started mapping
+Mar 03 22:01:47 ..... finished mapping
+Mar 03 22:01:51 ..... finished successfully
+	STAR --runThreadN 16 --genomeDir /scratch/zq45/yn0830/Utilitaries/STAR_Index --readFilesIn G41747.OCI-M1.5_R1.fastq.gz G41747.OCI-M1.5_R2.fastq.gz --readFilesCommand zcat --twopassMode Basic --outFileNamePrefix /scratch/zq45/yn0830/CCLE_Alignement/G41747.OCI-M1.5/
+	STAR version: 2.7.10b   compiled: 2022-11-01T09:53:26-04:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 03 22:01:51 ..... started STAR run
+Mar 03 22:01:53 ..... loading genome
+Mar 03 22:02:21 ..... started 1st pass mapping
+Mar 03 22:05:08 ..... finished 1st pass mapping
+Mar 03 22:05:10 ..... inserting junctions into the genome indices
+Mar 03 22:07:09 ..... started mapping
+Mar 03 22:10:47 ..... finished mapping
+Mar 03 22:10:52 ..... finished successfully
+	STAR --runThreadN 16 --genomeDir /scratch/zq45/yn0830/Utilitaries/STAR_Index --readFilesIn KASUMI-1_R1.fastq.gz KASUMI-1_R2.fastq.gz --readFilesCommand zcat --twopassMode Basic --outFileNamePrefix /scratch/zq45/yn0830/CCLE_Alignement/KASUMI-1/
+	STAR version: 2.7.10b   compiled: 2022-11-01T09:53:26-04:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 03 22:10:52 ..... started STAR run
+Mar 03 22:10:54 ..... loading genome
+Mar 03 22:11:22 ..... started 1st pass mapping
+Mar 03 22:15:36 ..... finished 1st pass mapping
+Mar 03 22:15:37 ..... inserting junctions into the genome indices
+Mar 03 22:17:26 ..... started mapping
+Mar 03 22:21:42 ..... finished mapping
+Mar 03 22:21:46 ..... finished successfully
+	STAR --runThreadN 16 --genomeDir /scratch/zq45/yn0830/Utilitaries/STAR_Index --readFilesIn KO52_R1.fastq.gz KO52_R2.fastq.gz --readFilesCommand zcat --twopassMode Basic --outFileNamePrefix /scratch/zq45/yn0830/CCLE_Alignement/KO52/
+	STAR version: 2.7.10b   compiled: 2022-11-01T09:53:26-04:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 03 22:21:46 ..... started STAR run
+Mar 03 22:21:46 ..... loading genome
+Mar 03 22:22:14 ..... started 1st pass mapping
+Mar 03 22:24:50 ..... finished 1st pass mapping
+Mar 03 22:24:51 ..... inserting junctions into the genome indices
+Mar 03 22:26:39 ..... started mapping
+Mar 03 22:29:44 ..... finished mapping
+Mar 03 22:29:49 ..... finished successfully
+
+======================================================================================
+                  Resource Usage on 2026-03-03 22:29:54:
+   Job Id:             162179128.gadi-pbs
+   Project:            zq45
+   Exit Status:        0
+   Service Units:      849.36
+   NCPUs Requested:    48                  CPU Time Used: 74:14:34        
+   Memory Requested:   600.0GB               Memory Used: 342.83GB        
+   Walltime Requested: 06:00:00            Walltime Used: 05:53:54        
+   JobFS Requested:    10.0GB                 JobFS Used: 0B              
+======================================================================================
