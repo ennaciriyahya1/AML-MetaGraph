@@ -1,12 +1,12 @@
 #!/bin/bash
 
-#PBS -l ncpus=48
-#PBS -l mem=600GB
+#PBS -l ncpus=32
+#PBS -l mem=800GB
 #PBS -l jobfs=10GB
 #PBS -q hugemem
 #PBS -P zq45
-#PBS -l walltime=06:00:00
+#PBS -l walltime=04:00:00
 #PBS -l storage=gdata/zq45+scratch/zq45
 #PBS -l wd
 
-bash STAR_Alignement.sh
+bash Graph_Building.sh
