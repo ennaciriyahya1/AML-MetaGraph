@@ -1,0 +1,106 @@
+---
+title: "Data_treatment"
+output: html_document
+date: "2026-03-10"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. 
+
+```{r}
+metagraph_results <- read.delim(
+   "/Users/yahya/Desktop/T-ALL_align_query.tsv",
+    header = FALSE,
+    sep = "\t",
+    stringsAsFactors = FALSE
+)
+View(metagraph_results) #Reads the tsv output
+```
+
+```{r}
+results_full <- data.frame() #Create an empty data frame of full results, to reformat the output
+results_cutoff <- data.frame() #Create an empty data frame, for results that made the cutoff
+k_cutoff = 10 #To define by the user, k-mer count cutoff to consider the k-mer as passing
+coverage_cutoff = 0.8 #To define by the user, coverage cutoff to be added to the results_cutoff data frame 
+lower_cutoff = 10 #Number of acceptable k-mers under the k-mer count cutoff
+
+metagraph_results$V32 <- NA #Insertion of an additional column, which needs to be empty in your TSV results file 
+#Additionally, check for misplaced results in the metagraph results, can happen due to tabulation mistakes
+
+rowlength = length(row.names(metagraph_results)) #Number of genes analyzed
+
+for(rower in 1:rowlength) { #To go through all genes and their results, line by line 
+  m = 2 #Important for output formatting, starts at 2 because the first cell of results should contain the gene name
+  n = 2 
+  t = 0 #To stop the while loop
+  column = 3 #Column of the metagraph results data frame, starts at 3 because col 1 is a number and col 2 is the gene name => Only collects the results per fastq
+  
+  while(t != 1) { #While we are not at the end of the current line in the metagraph results data frame
+    
+    if(grepl('fastq', metagraph_results[rower,column]) == TRUE) { #1st If => if the cell contains a results => Usually fast file name + kmer counts
+      z <- metagraph_results[rower, column] #Collects, line per line (rower), each result, using column which starts at 3
+      column = column + 1 #On to the next column
+      parts <- strsplit(z, ":", fixed = TRUE)[[1]] #Separates all k-mer results
+      l <- list() #Empty list for k-mer collection 
+      l[[1]] <- parts[[1]] #Names the list by the name of the fastq file
+      
+      for(i in 2:length(parts)) { #Starts at 2 because 1 contains the name of the list => fastq file name
+        
+        if (grepl('-' , parts[[i]]) == TRUE) { #Second if, to check if the count is associated with a single k-mer, or if it's many k-mers sharing a similar count (1-7=16 for example)
+          z = parts[[i]] #Takes the current k-mer count which was found to contain "-"
+          kcount = strsplit(z, "=")[[1]] #Splits the count and the k-mer number
+          klist = strsplit(kcount[[1]], "-")[[1]] #Splits the first and last k-mer sharing the similar count
+          count = kcount[[2]] #Stores the count 
+          
+          for (k in as.numeric(klist[[1]]):as.numeric(klist[[2]])) { #From the first k-mer to the last k-mer
+            l[[k+2]] <- count } } #Do not forget that the k-mers starts at 0, that position 1 is full (file name) so +2, for each k-mer number => Makes seeing missing k-mers easier, as their                                    #positions are null in the list l 
+        
+        else{  #Else of the second if, means single k-mer with its count
+          k = parts[[i]] 
+          kcount = strsplit(k, "=")[[1]]
+          knum = as.numeric(kcount[[1]])
+          count = kcount[[2]] # Same processing, without needing the "-" separation step, and no loop
+          l[[knum+2]]=count } }
+      
+      absent = 0 #Counter for the absent k-mers
+      lower = 0 #Counter for the k-mers under the cutoff
+      
+      for(i in 2:length(l)) { #To go through each k-mer, including empty positions in the list (missing k-mers)
+        
+        if (is.null(l[[i]]) == TRUE) { #Tests for absent k-mers
+          absent = absent + 1 }
+        
+        else if (as.numeric(l[[i]]) < k_cutoff) { #If not absent, then we check for the cutoff => The lower count is only for present k-mers
+          lower = lower + 1 } }
+      
+      totalkmer = (length(l) - 1) #Total number of k-mers 
+      coverage =  (totalkmer - absent)/totalkmer #Coverage 
+      
+      results_full[rower,1] = metagraph_results[rower,"V2"] #for each results we add the gene name
+      results_cutoff[rower,1] = metagraph_results[rower,"V2"]
+      
+      results_full[rower,m]<-l[[1]] #The file name
+      results_full[rower,m + 1]<- coverage #The coverage
+      results_full[rower,m + 2]<- lower #And the number of k-mers under the cutoff
+      
+      if (coverage > coverage_cutoff) {
+        if(lower < lower_cutoff) {
+           results_cutoff[rower,n]<-l[[1]] #The file name
+           results_cutoff[rower,n + 1]<- coverage #The coverage
+           results_cutoff[rower,n + 2]<- lower 
+           n = n + 3 } } #And the number of k-mers under the cutoff 
+      m = m + 3 } #3 by three 
+    
+    else{ #Else of 1st if, means that we finished analyzing the current because no fastq was found using grepl
+      t = 1 } } }
+
+#Optional library(writexl)
+#Optional write_xlsx(results_full, "results.xlsx") #Write out the output in the working directory
+```

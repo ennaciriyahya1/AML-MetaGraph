@@ -3,10 +3,14 @@
 # Activate conda (only if aws is in that env)
 CONDA_BASE=$(conda info --base)
 source $CONDA_BASE/etc/profile.d/conda.sh
+
 conda activate unsw
 
+scratch="/scratch/zq45/yn0830/"
+dirpath="/scratch/zq45/yn0830/Utilitaries/"
+
 # Go to scratch
-cd /scratch/zq45/yn0830
+cd ${scratch}
 
 # Create dedicated folder
 mkdir -p AML_RNA_BAM
@@ -34,8 +38,8 @@ awk -F',' '
     url=$12  # cram_bam_url (contains the bam for rna)
     if (url ~ /^s3:\/\/depmap-omics-ccle\/data\/rna\/bam\/.*\.bam$/) print url
   }
-' /scratch/zq45/yn0830/Utilitaries/Cell_lines.txt /scratch/zq45/yn0830/Utilitaries/inventory.csv | sort -u > bam_list.txt
+' ${dirpath}Cell_lines.txt ${dirpath}inventory.csv | sort -u > bam_list.txt
 
 
-# Parallel download (4 at a time)
+# Parallel download (8 at a time)
 cat bam_list.txt | xargs -n 1 -P 8 -I {} aws s3 cp --no-sign-request {} .

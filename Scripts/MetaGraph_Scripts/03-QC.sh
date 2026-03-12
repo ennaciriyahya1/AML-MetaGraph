@@ -5,7 +5,9 @@ source $CONDA_BASE/etc/profile.d/conda.sh
 
 conda activate unsw
 
-cd /scratch/zq45/yn0830/AML_RNA_BAM/fastq_output
+dirpath="/scratch/zq45/yn0830/AML_RNA_BAM/fastq_output"
+
+cd ${dirpath}
 
 mkdir -p FASTQC
 #Runs a Quality control on fastq files

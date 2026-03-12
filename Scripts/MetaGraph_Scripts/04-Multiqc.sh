@@ -7,7 +7,9 @@ conda activate unsw
 
 module load multiqc
 
-cd /scratch/zq45/yn0830/AML_RNA_BAM/fastq_output
+dirpath="/scratch/zq45/yn0830/AML_RNA_BAM/fastq_output"
+
+cd ${dirpath}
 
 mkdir -p MULTIQC
 
